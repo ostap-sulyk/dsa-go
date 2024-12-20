@@ -1,1 +1,1 @@
-# dsa-go
+# Data Structures and Algorithms implementation in Go
