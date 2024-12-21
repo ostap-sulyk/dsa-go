@@ -3,9 +3,8 @@ package linkedlist
 import "strconv"
 
 type LinkedList struct {
-	head   *Node
-	tail   *Node
-	length int
+	head, tail *Node
+	length     int
 }
 
 func NewLinkedList(value int) *LinkedList {
@@ -151,6 +150,18 @@ func (l *LinkedList) PrintList() {
 	println(output)
 }
 
-func (l *LinkedList) PrintHead()   { println("Head:", l.head.Value) }
-func (l *LinkedList) PrintTail()   { println("Tail:", l.tail.Value) }
+func (l *LinkedList) PrintHead() {
+	if l.head != nil {
+		println("Head:", l.head.Value)
+	} else {
+		println("Head: nil")
+	}
+}
+func (l *LinkedList) PrintTail() {
+	if l.tail != nil {
+		println("Tail:", l.tail.Value)
+	} else {
+		println("Tail: nil")
+	}
+}
 func (l *LinkedList) PrintLength() { println("Size:", l.length) }
